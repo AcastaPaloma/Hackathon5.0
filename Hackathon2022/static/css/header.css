@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    color: #444;
+    background-image: url(/static/images/background.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-margin: 10vh;
+
+}
+
+
+header {
+    background-image: url(/static/images/unicef-flag-texture-wavy-fabric-silk-satin-background-178361938.jpg);
+    height: 25vh;
+    width: 100vw;
+    opacity: 100;
+    display: block;
+    position: relative;
+    background-position: 50% 50%;
+
+
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.menu {
+    float: right;
+    margin-top: 6vh;
+    margin-left: 45px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li + li {
+    margin-left: 0px;
+}
+
+.menu li a {
+    color: #444;
+    text-decoration: none;
+}
+
+
+.example_e {
+    border: none;
+    background: #404040;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+
+.example_e:hover {
+    color: black !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+}
+
+
+footer {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+    padding: 3px;
+    background-color: DarkSalmon;
+    color: white !important;
+    z-index: 100;
+}

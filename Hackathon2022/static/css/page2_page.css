@@ -1,0 +1,115 @@
+div.about {
+    width: 100% !important;
+    height: auto !important;
+    margin: auto !important;
+
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+
+}
+
+.row {
+    position: absolute;
+
+    margin-top: 16vh;
+
+    left: 25%;
+    width: 50%;
+    text-align: center !important;
+    background-color: rgb(230, 230, 250, 0.7) !important;
+
+    height: 300vh !important;
+
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+
+}
+
+
+#balloon-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+}
+
+.balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-300vh);
+        opacity: 0;
+    }
+}
+
+
+.wrapper {
+    height: 20vh;
+    width: 100%;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typing-demo {
+    width: 150ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: "Brush Script MT";
+    font-size: 2em;
+
+@keyframes typing {
+    from {
+        width: 1000000px;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}

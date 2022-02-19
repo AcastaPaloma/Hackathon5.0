@@ -1,0 +1,268 @@
+/* Slideshow container */
+.slideshow-container {
+    width: 70vw;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: darkorange;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: yellow;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.wrapper {
+    height: 20vh;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typing-demo {
+    width: 27ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: "Courier New";
+    font-size: 8em;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+.big_container {
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 70vh;
+    font-size: 1rem;
+    line-height: 1.25;
+    background-color: #18222d;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+.grid {
+    width: 100%;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.grid-block {
+    width: 50%;
+    min-height: 11.25rem;
+    padding: 1rem;
+}
+
+.image-grid {
+    -webkit-transform: rotateX(45deg) rotateZ(45deg);
+    transform: rotateX(45deg) rotateZ(45deg);
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.image-grid .tile-link:hover .tile-img {
+    top: -1rem;
+    left: -1rem;
+}
+
+.image-grid .tile-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transition-property: opacity, top, left, box-shadow;
+    transition-property: opacity, top, left, box-shadow;
+}
+
+.tile-link {
+    display: block;
+}
+
+.tile-link:hover .tile-img {
+    opacity: 1;
+}
+
+.tile-link:hover .tile-img-link {
+    display: block;
+}
+
+.tile-link:hover .tile-img-link:hover .tile-img {
+    opacity: 0.5;
+}
+
+.tile-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.125s;
+    transition-duration: 0.125s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+}
+
+.tile-link:hover .tile-img1 {
+    box-shadow: 5px 5px rgba(244, 170, 200, 0.4),
+    10px 10px rgba(244, 170, 200, 0.3), 15px 15px rgba(244, 170, 200, 0.2),
+    20px 20px rgba(244, 170, 200, 0.1), 25px 25px rgba(244, 170, 200, 0.05);
+}
+
+.tile-link:hover .tile-img2 {
+    box-shadow: 5px 5px rgba(45, 186, 233, 0.4), 10px 10px rgba(45, 186, 233, 0.3),
+    15px 15px rgba(45, 186, 233, 0.2), 20px 20px rgba(45, 186, 233, 0.1),
+    25px 25px rgba(45, 186, 233, 0.05);
+}
+
+.tile-link:hover .tile-img3 {
+    box-shadow: 5px 5px rgba(214, 221, 244, 0.4),
+    10px 10px rgba(214, 221, 244, 0.3), 15px 15px rgba(214, 221, 244, 0.2),
+    20px 20px rgba(214, 221, 244, 0.1), 25px 25px rgba(214, 221, 244, 0.05);
+}
+
+.tile-link:hover .tile-img4 {
+    box-shadow: 5px 5px rgba(82, 119, 192, 0.4), 10px 10px rgba(82, 119, 192, 0.3),
+    15px 15px rgba(82, 119, 192, 0.2), 20px 20px rgba(82, 119, 192, 0.1),
+    25px 25px rgba(82, 119, 192, 0.05);
+}
+
+
+.image-1 {
+    position: absolute;
+    margin-left: 25vw;
+
+}
+
+#unicef-description {
+    position: absolute;
+    top: 120vh;
+    width: 100vw !important;
+    max-width: 100vw !important;
+}
+
+.unicef-description_2 {
+    width: 110ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: "Courier New";
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
