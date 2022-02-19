@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hackathon 2022</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+
+
+</head>
+
+
+<body>
+<header>
+
+
+    <div class="container">
+        <strong>
+            <nav>
+                <ul class="menu">
+
+                    <span class="button_cont" align="center"><a class="example_e" href="{{ url_for('home') }}"
+                                                                target="_self" rel="nofollow noopener">Home</a></span>
+
+                    <span class="button_cont" align="center"><a class="example_e" href="{{ url_for('search') }}"
+                                                                target="_self"
+                                                                rel="nofollow noopener">Search!</a></span>
+
+                    {% if 'logged_in_user' in session %}
+                    <span class="button_cont" align="center"><a class="example_e" href="{{ url_for('about') }}"
+                                                                target="_self" rel="nofollow noopener">Upload an article</a></span>
+
+                    {% else %}
+                    <span class="button_cont" align="center"><a class="example_e" href="{{ url_for('create_account') }}"
+                                                                target="_self" rel="nofollow noopener">Upload an article</a></span>
+                    {% endif %}
+
+                    {% if 'logged_in_user' in session %}
+                    <span class="button_cont" align="center"><a class="example_e" href="{{ url_for('logout') }}"
+                                                                target="_self"
+                                                                rel="nofollow noopener">Logout</a></span>
+                    {% else %}
+                    <span class="button_cont" align="center"><a class="example_e" href="{{ url_for('create_account') }}"
+                                                                target="_self"
+                                                                rel="nofollow noopener">Create account/Login</a></span>
+                    {% endif %}
+
+
+                </ul>
+            </nav>
+        </strong>
+    </div>
+</header>
+
+<footer>
+
+    <p style="">By Kuan Yi, Langyi and Eric<br>
+        Thanks for voting for us! Don't forget to consult the official website of UNICEF <a href="https://www.unicef.org/">here</a>!!!
+    </p>
+</footer>
+
+
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

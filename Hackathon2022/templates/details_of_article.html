@@ -1,0 +1,30 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/details_of_article_page.css') }}">
+    <title>Hackathon 2022</title>
+</head>
+<body class="body_css">
+{% extends "layout_without_css.html" %}
+{% block content %}
+
+<form action="/details_of_article" method="post">
+    <div class="container_of_card">
+        <div class="card">
+            <div class="img-container" style="background-color: rgb(135, 206, 250, 0.75)">
+                <img src="/static/images/tumblr_o6glrrMPD81tqsbu1o1_1280.jpg" style="max-width:100%; max-height: 100%; !important"/>
+            </div>
+            <div class="card-details">
+                <h2>Uploader: {{requested_name}}</h2>
+                <h2>Title: {{requested_article_name}}</h2>
+                <p>Article: {{requested_message | safe}}</p><br>
+
+            </div>
+        </div>
+    </div>
+
+
+</form>
+
+{% endblock %}
+</body>
+</html>

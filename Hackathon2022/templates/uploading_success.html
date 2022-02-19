@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/uploading_success_page.css') }}">
+
+
+
+
+</head>
+    {% extends "layout_without_css.html" %}
+    {% block content %}
+    <body class="successful">
+
+    <div class="card">
+        <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+        <i class="checkmark">✓</i>
+      </div>
+
+        <h1 class='pasta'>Success</h1>
+        <p>Upload success!;<br/> Your post is in our system! Here is a summary: </p>
+
+        <span>Username: </span><span>{{username}}</span><br>
+        <span>Email: </span><span>{{email}}</span><br>
+        <span>Message: </span><span>{{message}}</span><br><br><br>
+
+
+    </div>
+
+    {% endblock %}
+    </body>
+</html>
+
+
+

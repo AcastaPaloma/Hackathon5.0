@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home_page.css') }}">
+    <title>Hackathon 2022</title>
+
+</head>
+
+<body>
+{% extends "layout_without_css.html" %}
+{% block content %}
+
+<div class="wrapper" id="nothing_yet">
+    <div class="typing-demo">
+        <center>
+            What is UNICEF?
+        </center>
+    </div>
+</div>
+
+<div class="image-1">
+    <img src="static/images/image-1.jpg">
+</div>
+
+<div class="wrapper" id="unicef-description">
+    <div class="unicef-description_2">
+        <center>
+            UNICEF is an international organisation dedicated to ensure that all children in the world grow equally.
+            <br>
+            Every child deserves to have rights.<br>
+            Every child deserves to drink clean water.<br>
+            Every child deserves to be educated.<br>
+            Every child deserves to have what they deserve.
+        </center>
+    </div>
+</div>
+
+<div class="image-1" style="top: 145vh;">
+    <img src="static/images/world-map-in-cool-tones-tori-rodriguez.jpg">
+</div>
+
+<div class="wrapper" id="unicef-description" style="top:230vh; color: #333300;">
+    <div class="unicef-description_2">
+        <center>
+            UNICEF works in over 190 countries and territories to save children’s lives, to defend their rights, and to <br>
+            help them fulfil their potential, from early childhood through adolescence.
+            <br><br><br><br>
+            r
+        </center>
+    </div>
+</div>
+
+
+{% endblock %}
+</body>
+</html>

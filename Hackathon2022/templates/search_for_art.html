@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/search_for_art_page.css') }}">
+
+</head>
+
+<script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+
+</script>
+
+
+<body>
+{% extends "layout_without_css.html" %}
+{% block content %}
+
+<div class="search-box">
+
+
+    <form action="/search_results" method="post" class="search_rectangle">
+
+        <input type="text" class="input-search" name="search_input" placeholder="Type here...">
+
+        <button style="display:none;" class="glow-on-hover" type="button" onclick="return show('myDIV');"><input
+                class="my_button"
+                type="submit"
+                style="display: none;">Search!
+        </button>
+
+        <div class="box">
+            <a class="button_popup" href="#popup1">Click me!</a>
+        </div>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>To search: </h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Please use simple keywords to search for articles. Try 'Admin' to see results we implemented at
+                    first.<br><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="output" style="">
+
+            {% for item in records %}
+
+            <div id="container_of_table" class="container_of_table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Uploader's name</th>
+                        <th>Article title</th>
+                        <th>Link to details</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{item[1]}}</td>
+                        <td>{{item[2]}}</td>
+                        <td>
+                            <button class="glow-on-hover_1" type="button"
+                                    style="position: relative !important; left: 15%; color: white !important;"><a href="/details_of_article?name={{item[1]}}&article_name={{item[2]}}&email={{item[3]}}&message={{item[4]
+                                | replace('\n', '<br>') | urlencode }}">
+
+                                Visit details!</a>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <br>
+            {% endfor %}
+
+        </div>
+</div>
+</form>
+
+
+{% endblock %}
+</body>
+</html>
